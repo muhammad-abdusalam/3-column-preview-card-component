@@ -1,0 +1,247 @@
+/* Google Fonts */
+/* (1) Lexend Deca */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* font-family: 'Lexend Deca', sans-serif; */
+/* (2) Big Shoulders Display */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* font-family: 'Big Shoulders Display', cursive; */
+
+:root {
+  /* Colors */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+  /* Font */
+  --main-font-size: 15px;
+}
+/* General */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+img,
+button {
+  user-select: none;
+}
+/* Body */
+body {
+  min-height: 100vh;
+
+  position: relative;
+}
+/* Main */
+main {
+  min-height: 100vh;
+  padding: 75px 25px;
+
+  background-color: var(--Very-light-gray);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Cars Preview Start */
+main .cars-preview {
+  width: 900px;
+  border-radius: 9px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.cars-preview .car {
+  padding: 40px 45px;
+
+  position: relative;
+}
+@media (max-width: 576px) {
+  .cars-preview {
+    margin-bottom: 10px;
+  }
+  .cars-preview .car {
+    padding: 40px;
+  }
+}
+.cars-preview .car:nth-child(1) {
+  background-color: var(--Bright-orange);
+}
+.cars-preview .car:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+.cars-preview .car:nth-child(3) {
+  background-color: var(--Very-dark-cyan);
+}
+/* Animation Start*/
+@media (min-width: 567px) {
+  .cars-preview .car {
+    animation-name: column-arrangement;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .cars-preview .car:nth-of-type(1) {
+    left: 1500px;
+  }
+  .cars-preview .car:nth-of-type(2) {
+    left: 1750px;
+    animation-delay: 0.2s;
+  }
+  .cars-preview .car:nth-of-type(3) {
+    left: 2050px;
+    animation-delay: 0.4s;
+  }
+}
+@media (max-width: 566px) {
+  /* I will add (.animate) by js */
+  .cars-preview .car.animate {
+    animation-name: column-arrangement;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .cars-preview .car:nth-of-type(1) {
+    left: 1500px;
+  }
+  .cars-preview .car:nth-of-type(2) {
+    left: 1750px;
+    animation-delay: 0.2s;
+  }
+  .cars-preview .car:nth-of-type(3) {
+    left: 2050px;
+    animation-delay: -0.3s;
+  }
+}
+@keyframes column-arrangement {
+  to {
+    left: 0;
+  }
+}
+/* Animation End*/
+.cars-preview .car img {
+  width: 56px;
+  height: 35px;
+}
+.cars-preview .car h1 {
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 36px;
+  text-transform: uppercase;
+
+  margin: 30px 0;
+}
+.cars-preview .car p {
+  font-size: var(--main-font-size);
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparent-white);
+
+  line-height: 1.8;
+
+  margin-bottom: 70px;
+}
+@media (max-width: 826px) {
+  .cars-preview .car p {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .cars-preview .car p {
+    margin-bottom: 20px;
+  }
+}
+.cars-preview .car button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: var(--main-font-size);
+  text-transform: capitalize;
+
+  padding: 10px 25px;
+  border: 2px solid var(--Very-light-gray);
+  border-radius: 25px;
+
+  background-color: var(--Very-light-gray);
+
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+@media (max-width: 576px) {
+  .cars-preview .car button {
+    margin-bottom: 10px;
+  }
+}
+.cars-preview .car:nth-of-type(1) button {
+  color: var(--Bright-orange);
+}
+.cars-preview .car:nth-of-type(2) button {
+  color: var(--Dark-cyan);
+}
+.cars-preview .car:nth-of-type(3) button {
+  color: var(--Very-dark-cyan);
+}
+.cars-preview .car button:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray);
+}
+/* Cars Preview End */
+
+/* Attribution */
+footer.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  text-align: center;
+
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-light-gray);
+
+  width: 480px;
+  padding: 15px 30px 5px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  opacity: 0;
+  animation: show-footer 1s 1s forwards;
+}
+@media (max-width: 576px) {
+  footer.attribution {
+    width: 340px;
+  }
+}
+footer.attribution a {
+  color: var(--Transparent-white);
+
+  transition: opacity 0.3s;
+}
+footer.attribution a.author {
+  color: var(--Bright-orange);
+}
+footer.attribution a:hover {
+  opacity: 0.7;
+}
+@media (max-width: 566px) {
+  footer.attribution {
+    animation-duration: 0.5s;
+    animation-delay: 0.8s;
+  }
+}
+/* Animation */
+@keyframes show-footer {
+  to {
+    opacity: 1;
+  }
+}
