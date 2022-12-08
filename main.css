@@ -14,7 +14,7 @@
   --Transparent-white: hsla(0, 0%, 100%, 0.75);
   --Very-light-gray: hsl(0, 0%, 95%);
   /* Font */
-  --main-font-size: 15px;
+  --main-font-size: 0.9375rem;
 }
 /* General */
 * {
@@ -24,12 +24,6 @@
 
   margin: 0;
   padding: 0;
-}
-button {
-  border: none;
-}
-button:focus {
-  outline: none;
 }
 a {
   text-decoration: none;
@@ -47,7 +41,7 @@ body {
 /* Main */
 main {
   min-height: 100vh;
-  padding: 75px 25px;
+  padding: 20px 25px 40px;
 
   background-color: var(--Very-light-gray);
 
@@ -65,13 +59,13 @@ main .cars-preview {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .cars-preview .car {
-  padding: 40px 45px;
+  padding: 55px 45px;
 
   position: relative;
 }
 @media (max-width: 576px) {
   .cars-preview {
-    margin-bottom: 10px;
+    margin-bottom: 2.5rem;
   }
   .cars-preview .car {
     padding: 40px;
@@ -105,6 +99,7 @@ main .cars-preview {
     animation-delay: 0.4s;
   }
 }
+/* In Mobiles */
 @media (max-width: 566px) {
   /* I will add (.animate) by js */
   .cars-preview .car.animate {
@@ -113,14 +108,14 @@ main .cars-preview {
     animation-fill-mode: forwards;
   }
   .cars-preview .car:nth-of-type(1) {
-    left: 1500px;
+    left: 600px;
   }
   .cars-preview .car:nth-of-type(2) {
-    left: 1750px;
+    left: -600px;
     animation-delay: 0.2s;
   }
   .cars-preview .car:nth-of-type(3) {
-    left: 2050px;
+    left: 600px;
     animation-delay: -0.3s;
   }
 }
@@ -131,16 +126,16 @@ main .cars-preview {
 }
 /* Animation End*/
 .cars-preview .car img {
-  width: 56px;
-  height: 35px;
+  width: 72px;
+  height: 45px;
 }
-.cars-preview .car h1 {
+.cars-preview .car h2 {
   color: var(--Very-light-gray);
   font-family: "Big Shoulders Display", cursive;
-  font-size: 36px;
+  font-size: 2.8125rem;
   text-transform: uppercase;
 
-  margin: 30px 0;
+  margin: 40px 0;
 }
 .cars-preview .car p {
   font-size: var(--main-font-size);
@@ -149,7 +144,7 @@ main .cars-preview {
 
   line-height: 1.8;
 
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 @media (max-width: 826px) {
   .cars-preview .car p {
@@ -161,12 +156,12 @@ main .cars-preview {
     margin-bottom: 20px;
   }
 }
-.cars-preview .car button {
+.cars-preview .car a.more {
   font-family: "Lexend Deca", sans-serif;
-  font-size: var(--main-font-size);
+  font-size: 1rem;
   text-transform: capitalize;
 
-  padding: 10px 25px;
+  padding: 12px 28px;
   border: 2px solid var(--Very-light-gray);
   border-radius: 25px;
 
@@ -180,16 +175,16 @@ main .cars-preview {
     margin-bottom: 10px;
   }
 }
-.cars-preview .car:nth-of-type(1) button {
+.cars-preview .car:nth-of-type(1) a.more {
   color: var(--Bright-orange);
 }
-.cars-preview .car:nth-of-type(2) button {
+.cars-preview .car:nth-of-type(2) a.more {
   color: var(--Dark-cyan);
 }
-.cars-preview .car:nth-of-type(3) button {
+.cars-preview .car:nth-of-type(3) a.more {
   color: var(--Very-dark-cyan);
 }
-.cars-preview .car button:hover {
+.cars-preview .car a.more:hover {
   background-color: transparent;
   color: var(--Very-light-gray);
 }
@@ -203,13 +198,13 @@ footer.attribution {
   transform: translateX(-50%);
 
   font-family: "Lexend Deca", sans-serif;
-  font-size: 15px;
+  font-size: var(--main-font-size);
   text-align: center;
 
   background-color: var(--Very-dark-cyan);
   color: var(--Very-light-gray);
 
-  width: 480px;
+  width: 30rem;
   padding: 15px 30px 5px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
