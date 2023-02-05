@@ -5,8 +5,16 @@ This is a solution to the [3-column preview card component challenge on Frontend
 ### Screenshot
 
 ![Desktop](./screenshot/img-1.png)
-![Mobile](./screenshot/img-2.png)
 
-### Demo
+- **Demo**: https://muhammad-abdusalam.github.io/3-column-preview-card-component/
 
-https://muhammad-adam778.github.io/3-column-preview-card-component/
+### Built with ⚒️
+
+- HTML
+- CSS
+- JS
+
+### Author
+
+- Frontend Mentor - [@Muhammad-adam778](https://www.frontendmentor.io/profile/Muhammad-adam778)
+- Linkedin - [@muhammad-abdusalam](https://www.linkedin.com/in/muhammad-abdusalam)
